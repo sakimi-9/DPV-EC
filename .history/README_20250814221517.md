@@ -1,0 +1,60 @@
+# 电商数据分析项目 - Docker部署指南
+
+## 🚀 快速开始
+
+### 方法1：使用预构建镜像
+```bash
+# 拉取镜像
+docker pull sakimi9/ecommerce-analysis-frontend:latest
+
+# 运行容器
+docker run -d -p 8080:80 --name ecommerce-frontend sakimi9/ecommerce-analysis-frontend:latest
+```
+
+### 方法2：从源码构建
+```bash
+# 克隆项目
+git clone https://github.com/sakimi-9/data-analysis-visualization.git
+cd data-analysis-visualization/src/rendering
+
+# 构建并运行
+docker-compose up -d
+# 或
+bun run dev
+```
+
+### 方法3：使用镜像文件
+```bash
+# 加载镜像文件
+docker load -i ecommerce-analysis-frontend.tar
+
+# 运行容器
+docker run -d -p 8080:80 --name ecommerce-frontend sakimi9/ecommerce-analysis-frontend:latest
+```
+
+## 📋 访问应用
+打开浏览器访问：http://localhost:8080
+
+## 🛠️ 管理命令
+```bash
+# 查看运行状态
+docker ps
+
+# 查看日志
+docker logs ecommerce-frontend
+
+# 停止容器
+docker stop ecommerce-frontend
+
+# 删除容器
+docker rm ecommerce-frontend
+```
+
+## 📊 项目特性
+- Vue3 + TypeScript + Vite
+- ECharts数据可视化
+- 响应式设计
+- 电商数据分析仪表板
+- RFM客户价值分析
+- 销售趋势分析
+- 用户行为分析
